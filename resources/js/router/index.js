@@ -1,14 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
+import LandingPage from "../pages/LandingPage.vue";
+import AboutPage from "../pages/AboutPage.vue";  // Check this path
 
 const routes = [
-    { path: '/', component: () => import('@/pages/LandingPage.vue') },
-    { path: '/family-tree', component: () => import('@/pages/FamilyTree.vue') },
-    { path: '/events', component: () => import('@/pages/Events.vue') },
+  { path: "/", component: LandingPage },
+  { path: "/about", component: AboutPage },
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;
